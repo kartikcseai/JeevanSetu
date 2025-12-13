@@ -40,7 +40,7 @@ export function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-            <img src="/src/assets/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+            <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-5 h-5 object-contain" />
           </div>
           <span className="text-xl font-bold hidden sm:inline-block">
             Jeevan<span className="text-primary">Setu</span>
