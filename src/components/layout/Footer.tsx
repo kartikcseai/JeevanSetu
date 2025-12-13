@@ -45,7 +45,7 @@ export function Footer() {
             <div className="col-span-2 md:col-span-3 lg:col-span-2">
               <Link to="/" className="flex items-center gap-2 mb-12">
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                  <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+                  <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="text-2xl font-bold">JeevanSetu</span>
               </Link>
