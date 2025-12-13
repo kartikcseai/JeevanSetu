@@ -75,7 +75,7 @@ export default function DoctorDashboard() {
           </button>
           <Link to="/" className="flex items-center gap-2">
             <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-              <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
+              <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
             </div>
             <span className="text-xl font-bold text-foreground">
               Jeevan<span className="gradient-text">Setu</span>
@@ -113,7 +113,7 @@ export default function DoctorDashboard() {
             <div className="flex items-center justify-between p-4 border-b border-border">
               <Link to="/" className="flex items-center gap-2">
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                  <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
+                  <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="text-xl font-bold text-foreground">
                   Jeevan<span className="gradient-text">Setu</span>
@@ -215,9 +215,9 @@ function OverviewContent({ setActiveTab }: { setActiveTab: (tab: string) => void
   });
 
   const quickStats = [
-    { label: "Today's Patients", value: todayAppointments.length.toString(), icon: Users, color: "from-primary to-[hsl(190,74%,45%)]" },
-    { label: "Pending Reviews", value: appointments.filter(a => a.status === "upcoming").length.toString(), icon: FileText, color: "from-[hsl(190,74%,45%)] to-[hsl(200,70%,50%)]" },
-    { label: "Prescriptions", value: prescriptions.length.toString(), icon: Calendar, color: "from-[hsl(200,70%,50%)] to-[hsl(220,70%,55%)]" },
+    { label: "Today's Patients", value: todayAppointments.length.toString(), icon: Users, color: "from-primary to-[#4CAF50]" },
+    { label: "Pending Reviews", value: appointments.filter(a => a.status === "upcoming").length.toString(), icon: FileText, color: "from-primary to-[#4CAF50]" },
+    { label: "Prescriptions", value: prescriptions.length.toString(), icon: Calendar, color: "from-primary to-[#4CAF50]" },
   ];
 
   const firstName = profile?.full_name?.split(" ")[0] || "Doctor";
