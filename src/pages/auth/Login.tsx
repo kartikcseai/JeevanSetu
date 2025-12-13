@@ -81,7 +81,7 @@ export default function Login() {
         <div className="relative z-10 flex flex-col justify-center p-12 text-primary-foreground">
           <Link to="/" className="flex items-center gap-2 mb-12">
             <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-              <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+              <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
             </div>
             <span className="text-2xl font-bold">JeevanSetu</span>
           </Link>
@@ -132,7 +132,7 @@ export default function Login() {
           {/* Mobile Logo */}
           <Link to="/" className="flex lg:hidden items-center gap-2 mb-8 justify-center">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[hsl(150,70%,50%)] flex items-center justify-center">
-              <img src="/src/assets/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
+              <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-6 h-6 object-contain" />
             </div>
             <span className="text-xl font-bold text-foreground">JeevanSetu</span>
           </Link>
