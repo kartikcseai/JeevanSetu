@@ -1,0 +1,40 @@
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
+
+interface ProtectedRouteProps {
+  children: React.ReactNode;
+  requiredRole?: "patient" | "doctor";
+}
+
+export function ProtectedRoute({ children, requiredRole }: ProtectedRouteProps) {
+  const { user, profile, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Navigate to="/auth/login" replace />;
+  }
+
+  // Wait for profile to load
+  if (!profile) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  // Check role if required
+  if (requiredRole && profile.role !== requiredRole) {
+    const correctDashboard = profile.role === "doctor" ? "/dashboard/doctor" : "/dashboard/patient";
+    return <Navigate to={correctDashboard} replace />;
+  }
+
+  return <>{children}</>;
+}
