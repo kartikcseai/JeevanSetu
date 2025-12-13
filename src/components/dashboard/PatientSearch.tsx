@@ -31,7 +31,7 @@ export function PatientSearch() {
   const { patients, loading: patientsLoading } = usePatients();
   const { appointments, loading: appointmentsLoading } = useAppointments();
   const { prescriptions, loading: prescriptionsLoading } = usePrescriptions();
-  
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filterBy, setFilterBy] = useState<"all" | "recent" | "active">("all");
   const [selectedPatient, setSelectedPatient] = useState<PatientWithDetails | null>(null);
@@ -44,17 +44,17 @@ export function PatientSearch() {
     return patients.map(patient => {
       const patientAppointments = appointments.filter(a => a.patient_id === patient.id);
       const patientPrescriptions = prescriptions.filter(p => p.patient_id === patient.id);
-      
+
       // Extract unique conditions from prescriptions
       const conditions = [...new Set(patientPrescriptions.map(p => p.diagnosis))];
-      
+
       // Get symptoms from appointments as additional conditions
       const symptoms = patientAppointments
         .filter(a => a.symptoms)
         .map(a => a.symptoms as string);
-      
+
       const allConditions = [...new Set([...conditions, ...symptoms])].slice(0, 5);
-      
+
       // Get last visit date
       const sortedAppointments = [...patientAppointments].sort(
         (a, b) => new Date(b.scheduled_at).getTime() - new Date(a.scheduled_at).getTime()
@@ -78,7 +78,7 @@ export function PatientSearch() {
     // Apply search filter
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
-      result = result.filter(patient => 
+      result = result.filter(patient =>
         patient.full_name.toLowerCase().includes(query) ||
         patient.email.toLowerCase().includes(query) ||
         patient.conditions.some(c => c.toLowerCase().includes(query))
@@ -108,7 +108,7 @@ export function PatientSearch() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold text-foreground flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[hsl(200,70%,50%)] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#4CAF50] flex items-center justify-center">
             <Users className="w-6 h-6 text-primary-foreground" />
           </div>
           Patients
@@ -289,8 +289,8 @@ export function PatientSearch() {
                     </div>
                   )}
 
-                  <Button 
-                    variant="hero" 
+                  <Button
+                    variant="hero"
                     className="w-full"
                     onClick={() => setRecordsDialogOpen(true)}
                   >
