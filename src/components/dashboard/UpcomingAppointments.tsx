@@ -74,7 +74,7 @@ export function UpcomingAppointments() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold text-foreground flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[hsl(200,70%,50%)] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#4CAF50] flex items-center justify-center">
             <Calendar className="w-6 h-6 text-primary-foreground" />
           </div>
           Upcoming Appointments
@@ -136,8 +136,8 @@ export function UpcomingAppointments() {
                     <p className="font-semibold text-foreground truncate">{apt.patient?.full_name || "Patient"}</p>
                     <span className={cn(
                       "px-2 py-0.5 rounded-full text-xs font-medium shrink-0",
-                      isToday(new Date(apt.scheduled_at)) 
-                        ? "bg-primary/10 text-primary" 
+                      isToday(new Date(apt.scheduled_at))
+                        ? "bg-primary/10 text-primary"
                         : "bg-accent text-accent-foreground"
                     )}>
                       {getDateLabel(apt.scheduled_at)}
@@ -153,8 +153,8 @@ export function UpcomingAppointments() {
                 {/* Status Badge */}
                 <span className={cn(
                   "px-3 py-1 rounded-full text-xs font-medium shrink-0",
-                  apt.status === "in-progress" 
-                    ? "bg-primary text-primary-foreground" 
+                  apt.status === "in-progress"
+                    ? "bg-primary text-primary-foreground"
                     : "bg-accent text-accent-foreground"
                 )}>
                   {apt.status === "in-progress" ? "In Progress" : "Upcoming"}
