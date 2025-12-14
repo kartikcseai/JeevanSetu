@@ -75,7 +75,7 @@ export default function DoctorDashboard() {
           </button>
           <Link to="/" className="flex items-center gap-2">
             <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-              <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
+              <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
             </div>
             <span className="text-xl font-bold text-foreground">
               Jeevan<span className="gradient-text">Setu</span>
@@ -113,7 +113,7 @@ export default function DoctorDashboard() {
             <div className="flex items-center justify-between p-4 border-b border-border">
               <Link to="/" className="flex items-center gap-2">
                 <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                  <img src="https://i.postimg.cc/7LRCWKdG/Sanjeevani-(3).png" alt="Logo" className="w-8 h-8 object-contain" />
+                  <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="text-xl font-bold text-foreground">
                   Jeevan<span className="gradient-text">Setu</span>
@@ -338,7 +338,7 @@ function ConsultationsContent() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold text-foreground flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[hsl(200,70%,50%)] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#4CAF50] flex items-center justify-center">
             <Users className="w-6 h-6 text-primary-foreground" />
           </div>
           Consultations
@@ -520,7 +520,7 @@ function PrescriptionCreator() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold text-foreground flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[hsl(200,70%,50%)] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#4CAF50] flex items-center justify-center">
             <FileText className="w-6 h-6 text-primary-foreground" />
           </div>
           E-Prescription Creator
@@ -671,7 +671,7 @@ function ScheduleContent() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold text-foreground flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[hsl(200,70%,50%)] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#4CAF50] flex items-center justify-center">
             <Calendar className="w-6 h-6 text-primary-foreground" />
           </div>
           Schedule
